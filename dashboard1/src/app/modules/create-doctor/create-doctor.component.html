@@ -1,0 +1,54 @@
+
+<div class="login">   
+    <form  class="form-inline login-container"  [formGroup] = "createDoctor" (ngSubmit) = "uploadSubmit()">
+        <div cclass="form-content card">
+              
+        <div >
+            <h1 >Add New Doctor!</h1>
+        </div>
+        
+        <div>
+           <div>
+           <div>
+               <div>
+                <label for="category"> Select Category:</label>
+                <select class="form-control" formControlName="selectCategory"> 
+                    <option value="0">--All--</option>
+                    <option *ngFor="let data of tableData" value={{data.categoryId}} >
+                        {{data.category}} 
+                    </option>
+                </select>
+                </div>
+            </div>
+            
+            <div>
+                <div >
+                    <label for="name">Enter Name:</label>
+                    <input class="form-control" type="text" formControlName="doctorName" placeholder=" Name" />
+                </div>
+
+                <div >
+                    <label for="name">Enter Telephone:</label>
+                    <input class="form-control" type="text"  formControlName="telephone1" placeholder="Mobile Number" />
+                    <input  class="form-control" type="text"  formControlName="telephone2" placeholder="Land Number" />
+                </div>
+            </div>
+
+        </div>
+
+        <div >
+            <div >
+            <div >
+                <button class="btn btn-sm btn-primary" type="submit">Add</button>
+            </div>
+            </div >
+            
+        </div>
+
+
+    </div>
+    </div>
+  
+    </form>
+  </div>
+  

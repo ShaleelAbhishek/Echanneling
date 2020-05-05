@@ -1,0 +1,70 @@
+<div>
+    <!-- <form  class="form-inline" [formGroup] = "findDoctor" >
+        <div class="form-content"> -->
+          
+    
+            
+
+             <div class="form-content">
+                <div >
+                    <h1 >Patient List!</h1>
+                </div>
+
+                
+                    
+            
+            <div>
+                <table class="table table-bordered" id="dataTable" width="50%"
+                cellspacing="0">
+                
+                
+                <thead>
+                    <tr>
+                      <th>Patient Name</th>
+                      <th>Email Address</th>
+                      <th>Gender</th>
+                      <th>Address</th>
+                      <th>Telephone Number</th>
+                      <!-- <th>User Name</th>  -->
+                    </tr>
+                  </thead>
+               
+                  
+                  <tbody>
+                        <tr *ngFor = "let data of tableData">
+                
+                             <td style="text-align: center;">
+                                {{data.patientName}}
+                            </td>
+                             <td style="text-align: center;">
+                                {{data.patientEmail}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.gender}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.address.address}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.telephones[0].telNumber}} / {{data.telephones[1].telNumber}}
+                            </td>
+                            <!-- <td style="text-align: center;">
+                                {{data.userName}}
+                            </td> -->
+                            <!-- <td style="text-align: center;">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                  (click)="RoutePage(data)">View</button>
+                              </td> -->
+                    
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    
+        </div>
+    
+
+
+

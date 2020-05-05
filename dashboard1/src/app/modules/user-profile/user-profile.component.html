@@ -1,0 +1,84 @@
+
+<div class="login">   
+    <form  class = "form-inline login-container" [formGroup]="userProfile" (ngSubmit)="uploadSubmit()">
+      <div class="form-content card">
+              
+        <div > 
+          <div >
+                <h1 >My Profile!</h1>
+          </div>
+        </div>
+             
+        <div>
+          <div >
+              <h4 class="form-group">Name:</h4>
+            <input class="form-control" type="text" formControlName="patientName" placeholder=" Name">
+           
+          </div>
+                
+          <div >
+            <h4 class="form-group">User Name:</h4>
+            <input  class="form-control" type="text"  formControlName="userName" placeholder="User Name" >
+            
+          </div>
+  
+          <div>
+            <h4 class="form-group">Email Address:</h4>
+            <input class="form-control" type="email"  formControlName="patientEmail" placeholder="Email Address" />
+          </div>
+              
+        </div>
+                
+        <div>
+          <div >
+            <h4 class="form-group">Age:</h4>
+            <input class="form-control" type="text"  formControlName="age" placeholder="age" />
+          </div>
+  
+          <div >
+            <h4 class="form-group">Gender:</h4>
+            <input class="form-control" type="text"  formControlName="gender" placeholder="gender" />      
+          </div>
+        </div>
+  
+        <div >
+          <div >
+            <h4 class="form-group">Mobile Number:</h4>
+            <input class="form-control" type="text"  formControlName="telephone1" placeholder="Mobile Number" />
+          </div>
+                   
+          <div >
+            <h4 class="form-group">Land Number:</h4>
+            <input class="form-control" type="text"  formControlName="telephone2" placeholder="Land Number" />
+          </div>
+        </div>
+  
+        <div >
+          <div >
+            <h4 class="form-group">Address:</h4>
+            <input class="form-control" type="text"  formControlName="address" placeholder="Address" />             
+          </div>
+        </div>
+  
+              
+        <!-- <div hidden>
+          <div >   
+            <input type="password"  formControlName="password" placeholder="Password" />
+                   >
+          </div>
+        </div> -->
+                
+        <div >
+          <div >
+          
+            <button class="btn btn-primary btn-sm" type="submit">Update</button>
+          </div>
+        </div>
+  
+        
+      </div>
+  
+    </form>
+  
+  </div>
+  

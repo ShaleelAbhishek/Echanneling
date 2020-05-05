@@ -1,0 +1,34 @@
+
+   <div class="login">        
+    <form class ="form-inline login-container" [formGroup] = "doctorProfiles"  >
+            
+        <div class="form-content card">
+                
+            <div >
+                <h1 >Doctors Details!</h1>
+            </div>
+
+            <div>
+                <h4 class="form-group">Doctor Id:</h4>
+                <input class="form-control" type="text" formControlName="doctorId" placeholder="Id">
+            </div>  
+
+            <div>
+                <h4 class="form-group">Name:</h4>
+                <input class="form-control" type="text" formControlName="doctorName" placeholder="Name">
+            </div>
+
+            <div>
+                <h4 class="form-group">Specialty:</h4>
+                <input class="form-control" type="text" formControlName="category" placeholder="Specialty">
+            </div>
+               
+            <div>
+                <h4 class="form-group">Telephone:</h4>
+                <input class="form-control" type="text" formControlName="telephone1" placeholder="Mobile">
+                <input class="form-control" type="text" formControlName="telephone2" placeholder="Mobile">
+            </div>   
+                
+        </div>
+    </form>
+</div>

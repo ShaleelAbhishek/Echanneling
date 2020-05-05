@@ -1,0 +1,80 @@
+<div>
+    <!-- <form  class="form-inline" [formGroup] = "findDoctor" > -->
+        <div class="form-content">
+          
+    
+            
+
+    <!-- <form [formGroup] = "viewAllAppointment"> -->
+             <div class="form-content">
+                <div >
+                    <h1 >Appoinments!</h1>
+                </div>
+
+                
+                    
+            
+            <div>
+                <table class="table table-bordered" id="dataTable" width="50%"
+                cellspacing="0">
+                
+                
+                <thead>
+                    <tr>
+                      <th>Appoinment Id</th>
+                      <th>Patient Id</th>
+                      <th>Patient Name</th>
+                      <th>Doctor Name</th>
+                      <th>Specialty</th>
+                      <th>Appointment Date</th>
+                      <th>Appointment Time</th>
+                      <th>created Date</th> 
+                    </tr>
+                  </thead>
+               
+                  
+                  <tbody>
+                        <tr *ngFor = "let data of tableData">
+                
+                             <td style="text-align: center;">
+                                {{data.appointmentId}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.patient.patientId}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.patient.patientName}}
+                            </td>
+                             <td style="text-align: center;">
+                                {{data.doctor.doctorName}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.doctor.specialty.category}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.appointmentDate}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.appointmentStartTime}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{data.createdAt}}
+                            </td>
+                            <!-- <td style="text-align: center;">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                  (click)="RoutePage(data)">View</button>
+                              </td> -->
+                    
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div></div>
+        <!-- </form> -->
+        </div>
+    
+
+
+
+

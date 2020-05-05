@@ -1,0 +1,96 @@
+
+<div class="login">   
+  <form class="login-container form-inline" [formGroup]="userRegistration" (ngSubmit)="uploadSubmit()">
+    <div class="form-content card">
+            
+      <div > 
+        <div >
+              <h1 >Create an Account!</h1>
+        </div>
+      </div>
+           
+      <div>
+        <div>
+          <input type="text" class="form-control" formControlName="patientName" placeholder=" Name"
+          [ngClass]="{ 'is-invalid': submitted &&
+                        controlerData.patientName.errors }" />
+              <div *ngIf="submitted && controlerData.patientName.errors"
+                    class="invalid-feedback">
+              <div *ngIf="controlerData.patientName.errors.required">
+                   </div></div>
+        </div>
+              
+        <div >
+          <input type="text" class="form-control" formControlName="userName" placeholder="User Name" 
+          [ngClass]="{ 'is-invalid': submitted &&
+                        controlerData.userName.errors }" />
+              <div *ngIf="submitted && controlerData.userName.errors"
+                    class="invalid-feedback">
+              <div *ngIf="controlerData.userName.errors.required">
+                   </div></div>
+        </div>
+
+        <div>
+          <input type="email" class="form-control" formControlName="patientEmail" placeholder="Email Address" />
+        </div>
+            
+      </div>
+              
+      <div>
+        <div >
+          <input type="text" class="form-control" formControlName="age" placeholder="Age" />
+        </div>
+
+        <!-- <div >
+          <input type="text" class="form-control" formControlName="idCardNumber" placeholder="Identity card number" />      
+        </div> -->
+      </div>
+
+        <div >
+          <div>
+          <input type="text" class="form-control" formControlName="gender" placeholder="Gender" />      
+        </div>
+      </div>
+
+      
+      <div >
+        <div >
+          <input type="text"class="form-control"  formControlName="telephone1" placeholder="Mobile Number" />
+        </div>
+                 
+        <div >
+          <input type="text" class="form-control" formControlName="telephone2" placeholder="Land Number" />
+        </div>
+      </div>
+
+      <div >
+        <div >
+          <input type="text" class="form-control" formControlName="address" placeholder="Address" />             
+        </div>
+      </div>
+
+            
+      <div >
+        <div >   
+          <input type="password" class="form-control"  formControlName="password" placeholder="Password" />
+                 <!-- <div >
+                      <input type="password"  formControlName="confirmPassword" placeholder="Confirm Password" />
+                  </div> -->
+        </div>
+      </div>
+              
+      <div >
+        <div >
+          <button class="btn btn-primary btn-sm" type="submit">Register Account</button>
+          <button class="btn btn-sm btn-primary" type="submit" routerLink = "" style="padding-right: 10px;  border-radius: 2px; margin: 10px;">Login</button>
+           
+        </div>
+      </div>
+    </div>
+    </form>
+      
+    </div>
+
+  
+
+

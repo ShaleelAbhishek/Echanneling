@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span>Meet Your Doctor</span>
+        
+
+        <div fxFlex fxLayout = "row" fxLayoutAlign = "flex-end">
+            <ul fxLayout = "row" fxLayoutGap = "20px">
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>help_outline</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>person_outline</mat-icon>
+                    </button>
+                        <mat-menu #menu="matMenu">
+                            <a button mat-menu-item routerLink = "/dashboard/userProfile" >
+                                <mat-icon>person_outline</mat-icon>
+                                My Profile
+                             </a>
+                            <a button mat-menu-item (click)="logout()"  >
+                                <mat-icon>exit_to_app</mat-icon>
+                                Sign out
+                             </a>
+                            <!-- <button mat-menu-item>Item 2</button> -->
+                        </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

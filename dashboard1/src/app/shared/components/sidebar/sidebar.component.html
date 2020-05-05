@@ -1,0 +1,22 @@
+
+<mat-nav-list>
+    <div class = "profile-card">
+         <div class = "header">
+            <h2> {{userName}}</h2>
+        </div>
+        <img src="assets/img/user.png" alt="">
+    </div>
+
+
+<mat-divider></mat-divider>
+
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/main">Dashboard</a>
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/addAppointment" *ngIf="!isAdmin">Add Appointment</a>
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/viewAppointments" *ngIf="!isAdmin">My Appointments</a>
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/findDoctor">Find Your Doctor</a>
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/createDoctor" *ngIf="isAdmin">Create Doctor</a>
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/allAppointments" *ngIf="isAdmin">View All Appointments</a>
+<a mat-list-item routerLinkActive = "list-item-active" routerLink = "/dashboard/patients" *ngIf="isAdmin">View All Patients</a>
+
+
+</mat-nav-list>

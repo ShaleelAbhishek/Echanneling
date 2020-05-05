@@ -1,0 +1,39 @@
+<div class="login">  
+  <form  class="form-inline login-container" [formGroup]= "addAppointment" (ngSubmit)="uploadSubmit()">
+    <div class="form-content">
+              
+    <div > 
+      <div >
+        <h1 >Add Appointment!</h1>
+      </div>
+    </div>
+        
+    <div>
+      <label for="doctor"> Select Doctor:</label>
+        <select class="form-control" formControlName="selectDoctor" > 
+          <option disabled selected="selected"> Select Doctor</option>
+          <option *ngFor="let data of tableData" value={{data.doctorId}} >
+            {{data.doctorName}}</option>
+        </select>
+    </div>
+      
+    <div>
+      <label for="appointmentDate">Select Date:</label>
+      <input type="date" class="form-control" formControlName="appointmentDate" name="appointmentDate">
+    </div>
+
+    <div>
+      <label for="appointmentStartTime">Select a time:</label>
+      <input class="form-control" type="time" formControlName="appointmentStartTime" name="appointmentStartTime">
+    </div>
+                   
+    <div >
+      <div >
+        <button class="btn btn-sm btn-primary" type="submit">Add Appointment</button>
+      </div>
+    </div>
+      
+    </div>
+  </form>
+</div>
+  
